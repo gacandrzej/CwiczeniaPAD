@@ -23,16 +23,12 @@ Pliki ikon, obrazów ściągnij z teams. ( animals.zip )
 14. Dodaj etykietę i obsłuż wyświetlanie, dodawanie i usuwanie:
 > ![](media/image6.png)
 15. Popraw wygląd aplikacji poprzez:
-```
 <!-- -->
-```
 a)  dobór czcionki, klasa Font,
 b)  wyświetlenie całych napisów na przyciskach,
 c)  dodaj ikonę aplikacji.
 d)  Dodaj kolory.
-```
 <!-- -->
-```
 16. ![](media/image7.png)
     Dodaj klasę z testem:
 17. Dodaj metodę setUp():
