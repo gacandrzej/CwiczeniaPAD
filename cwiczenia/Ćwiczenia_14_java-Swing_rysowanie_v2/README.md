@@ -8,38 +8,38 @@ _*Potrzebne obrazki ściągnij z teams.*_
 
 ---
 
-1. ### Utwórz nowy projekt w katalogu na dysku C:
-2. ### Dodaj klasę MyDraw, która rozszerza JFrame.
-3. ### Dodaj 3 klasy o nazwach LeftPanel, MiddlePanel i RightPanel , które dziedziczą po JPanel.
+>1.  Utwórz nowy projekt w katalogu na dysku C:
+>2.  Dodaj klasę MyDraw, która rozszerza JFrame.
+>3.  Dodaj 3 klasy o nazwach LeftPanel, MiddlePanel i RightPanel , które dziedziczą po JPanel.
 
-4. ### Zastosuj BoxLayout:
+>4.  Zastosuj BoxLayout:
 
 ![](media/image1.png)
 
-5.  ###  W klasach LeftPanel, MiddlePanel i RightPanel dodaj konstruktory, a w nich delikatne kolory tła, oraz preferowany rozmiar.
+>5.  W klasach LeftPanel, MiddlePanel i RightPanel dodaj konstruktory, a w nich delikatne kolory tła, oraz preferowany rozmiar.
 
 ![](media/image2.png)
 
-6. ### W klasach LeftPanel, MiddlePanel i RightPanel nadpisz metodę paintComponent ( Ctrl+o ).
+>6. W klasach LeftPanel, MiddlePanel i RightPanel nadpisz metodę paintComponent ( Ctrl+o ).
 ![](media/image3.png)
-7. ### Dodaj antyaliasing.
-8. ### Przetestuj proste przykłady z wykładu, dobierz odpowiednie kolory:    
+>7. Dodaj antyaliasing.
+>8. Przetestuj proste przykłady z wykładu, dobierz odpowiednie kolory:    
 
     
-* ### Rysowanie tekstu
+*  Rysowanie tekstu
 ![](media/image4.png)
-* ###  Rysowanie koła i okręgu
+*   Rysowanie koła i okręgu
 ![](media/image5.png)
     
  ![](media/image6.png)
-c)  Rysowanie linii, dodaj również linię
+*  Rysowanie linii, dodaj również linię
  pionową i pod kątem 45 stopni.
     
  ![](media/image7.png)
-d)  Rysowanie prostokąta
+*  Rysowanie prostokąta
  ![](media/image8.png)
     
-e)  Inne: rysowanie: łuku, wycinka
+*  Inne: rysowanie: łuku, wycinka
     koła    
 ![](media/image9.png) ![](media/image10.png)
 
@@ -54,6 +54,7 @@ e)  Inne: rysowanie: łuku, wycinka
 11. Dodaj koło z gradientem radialnym na dwa i trzy kolory:
 
 ![](media/image15.png)
+
 12. Odrysuj wybrane warzywo z pliku.
 
 13. Dodaj wycinek koła:    
