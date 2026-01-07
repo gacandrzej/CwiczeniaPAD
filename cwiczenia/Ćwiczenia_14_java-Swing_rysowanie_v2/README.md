@@ -8,22 +8,20 @@ _*Potrzebne obrazki ściągnij z teams.*_
 
 ---
 
->1.  Utwórz nowy projekt w katalogu na dysku C:
->2.  Dodaj klasę MyDraw, która rozszerza JFrame.
->3.  Dodaj 3 klasy o nazwach LeftPanel, MiddlePanel i RightPanel , które dziedziczą po JPanel.
+1.  Utwórz nowy projekt w katalogu na dysku C:
+2.  Dodaj klasę MyDraw, która rozszerza JFrame.
+3.  Dodaj 3 klasy o nazwach LeftPanel, MiddlePanel i RightPanel , które dziedziczą po JPanel.
 
->4.  Zastosuj BoxLayout:
+4.  Zastosuj BoxLayout:
+<p align="center"> <img src="media/image1.png" width="75%" /> </p>
+5.  W klasach LeftPanel, MiddlePanel i RightPanel dodaj konstruktory, a w nich delikatne kolory tła, oraz preferowany rozmiar.
 
-![](media/image1.png)
+<p align="center"> <img src="media/image2.png" width="75%" /> </p>
 
->5.  W klasach LeftPanel, MiddlePanel i RightPanel dodaj konstruktory, a w nich delikatne kolory tła, oraz preferowany rozmiar.
-
-![](media/image2.png)
-
->6. W klasach LeftPanel, MiddlePanel i RightPanel nadpisz metodę paintComponent ( Ctrl+o ).
+6. W klasach LeftPanel, MiddlePanel i RightPanel nadpisz metodę paintComponent ( Ctrl+o ).
 ![](media/image3.png)
->7. Dodaj antyaliasing.
->8. Przetestuj proste przykłady z wykładu, dobierz odpowiednie kolory:    
+7. Dodaj antyaliasing.
+8. Przetestuj proste przykłady z wykładu, dobierz odpowiednie kolory:    
 
     
 *  Rysowanie tekstu
