@@ -13,23 +13,27 @@ _*Potrzebne obrazki ściągnij z teams.*_
 3.  Dodaj 3 klasy o nazwach LeftPanel, MiddlePanel i RightPanel , które dziedziczą po JPanel.
 
 4.  Zastosuj BoxLayout:
-<p align="center"> <img src="media/image1.png" width="75%" /> </p>
+
+  <p align="center"> <img src="media/image1.png" width="65%" /> </p>
+
 5.  W klasach LeftPanel, MiddlePanel i RightPanel dodaj konstruktory, a w nich delikatne kolory tła, oraz preferowany rozmiar.
 
-<p align="center"> <img src="media/image2.png" width="75%" /> </p>
+  <p align="center"> <img src="media/image2.png" width="65%" /> </p>
 
 6. W klasach LeftPanel, MiddlePanel i RightPanel nadpisz metodę paintComponent ( Ctrl+o ).
-![](media/image3.png)
+  <p align="center"> <img src="media/image3.png" width="55%" /> </p>
+   
 7. Dodaj antyaliasing.
 8. Przetestuj proste przykłady z wykładu, dobierz odpowiednie kolory:    
 
     
 *  Rysowanie tekstu
-![](media/image4.png)
+  <p align="center"> <img src="media/image4.png" width="65%" /> </p>
 *   Rysowanie koła i okręgu
-![](media/image5.png)
-    
- ![](media/image6.png)
+
+  <p align="center"> <img src="media/image5.png" width="65%" /> </p>
+  <p align="center"> <img src="media/image6.png" width="65%" /> </p>
+
 *  Rysowanie linii, dodaj również linię
  pionową i pod kątem 45 stopni.
     
