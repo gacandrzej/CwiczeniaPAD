@@ -1,9 +1,12 @@
-### Ćwiczenia 14 -- rysowanie
+## Ćwiczenia 14 -- rysowanie
 
-Na koniec zajęć prześlij pliki źródłowe i z danymi, wynikami do zasobu w
-teams.  
-Potrzebne obrazki ściągnij z teams.
+---
 
+_Na koniec zajęć prześlij pliki źródłowe i z danymi, wynikami do zasobu w
+teams._  
+_*Potrzebne obrazki ściągnij z teams.*_
+
+---
 
 1.  Utwórz nowy projekt w katalogu na dysku C:
 2.  Dodaj klasę MyDraw, która rozszerza JFrame.
@@ -47,7 +50,7 @@ e)  Inne: rysowanie: łuku, wycinka
 9.  Dodaj trapez, metody moveTo, lineTo dla Path2D. Dodaj obrys.    
  ![](media/image11.png)
 
-11. Dodaj prostokąt z gradientem liniowym, na dwa kolory i trzy:
+10. Dodaj prostokąt z gradientem liniowym, na dwa kolory i trzy:  
  ![](media/image12.png)
  ![](media/image13.png)
  ![](media/image14.png)
