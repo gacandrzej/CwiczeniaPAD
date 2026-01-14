@@ -13,17 +13,20 @@ _*Potrzebne obrazki ściągnij z teams.*_
 3.  Dodaj 3 klasy o nazwach LeftPanel, MiddlePanel i RightPanel , które
     dziedziczą po JPanel.
 4.  Zastosuj BoxLayout:
-![](media/image1.png)
+    <p align="center"> <img src="media/image1.png" width="65%" /> </p>
+
 5.  W klasach LeftPanel, MiddlePanel i
     RightPanel dodaj konstruktory, a w nich delikatne kolory tła, oraz
     preferowany rozmiar.
-    ![](media/image2.png)
+    <p align="center"> <img src="media/image2.png" width="65%" /> </p>
+
 6.  W klasach LeftPanel, MiddlePanel i RightPanel nadpisz metodę
     paintComponent ( Ctrl+o ).
-![](media/image3.png)
+    <p align="center"> <img src="media/image3.png" width="65%" /> </p>
+
 7.  Dodaj antyaliasing.
 8.  Narysuj funkcję kwadratową. Podaj współczynniki a, b, c.
-> ![](media/image4.png)
+> <p align="center"> <img src="media/image4.png" width="65%" /> </p>
 >
 > ![](media/image5.png)
 9.  Narysuj wykres funkcji sinus, dodaj również układ współrzędnych z
