@@ -34,6 +34,8 @@ _*Potrzebne obrazki ściągnij z teams.*_
 
     <p align="center"> <img src="media/image7.png" width="65%" /> </p>
 
+![img.png](media/img.png)
+
 9.  Przetestuj aplikację:
 
  ![](media/image8.png)
