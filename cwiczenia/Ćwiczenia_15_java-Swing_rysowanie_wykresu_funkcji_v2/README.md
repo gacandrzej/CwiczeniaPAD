@@ -21,7 +21,7 @@ _*Potrzebne obrazki ściągnij z teams.*_
     <p align="center"> <img src="media/image2.png" width="65%" /> </p>
 
 6.  W klasach LeftPanel, MiddlePanel i RightPanel nadpisz metodę
-    paintComponent ( Ctrl+o ).
+    paintComponent ( `Ctrl`+`o` ).
     <p align="center"> <img src="media/image3.png" width="65%" /> </p>
 
 7.  Dodaj antyaliasing.
