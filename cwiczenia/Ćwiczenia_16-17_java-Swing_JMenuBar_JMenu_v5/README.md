@@ -1,4 +1,4 @@
-# Ćwiczenia 14-15 -- tworzenie menu aplikacji
+# Ćwiczenia 16-17 -- tworzenie menu aplikacji
 
 💡_*Na koniec zajęć prześlij pliki źródłowe i z danymi, wynikami do zasobu w
 teams.*_  
@@ -15,7 +15,8 @@ _*Potrzebne obrazki ściągnij z teams.*_
 4.  Dodaj potrzebne metody:
     <p align="center"> <img src="media/image2.png" width="65%" /> </p>
 
-    <p align="center"> <img src="media/image3.png" width="65%" /> </p>
+    
+![](media/image3_1.png)
     
 5.  Utwórz główny pasek menu i podmenu file:
 
