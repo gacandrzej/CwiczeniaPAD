@@ -21,5 +21,11 @@
 - [Ćwiczenia_18-19_java-Swing_JMenuBar_JMenu_listener_v1](cwiczenia/Ćwiczenia_18-19_java-Swing_JMenuBar_JMenu_listener_v1/README.md)
 - [Ćwiczenia_20_java-Swing_JList_v1](cwiczenia/Ćwiczenia_20_java-Swing_JList_v1/README.md)
 - [Ćwiczenia_21-25_java-Swing_JList_v4](cwiczenia/Ćwiczenia_21-25_java-Swing_JList_v4/README.md)
+- [Ćwiczenia_26-27_java-Swing_KeyListener_v3](cwiczenia/Ćwiczenia_26-27_java-Swing_KeyListener_v3/README.md)
+- [Ćwiczenia_28-31_java-Swing_MouseListener_Puzzle_v2](cwiczenia/Ćwiczenia_28-31_java-Swing_MouseListener_Puzzle_v2/README.md)
+- [Ćwiczenia_32-37_java-Swing_ComponentListener_JTable_v4](cwiczenia/Ćwiczenia_32-37_java-Swing_ComponentListener_JTable_v4/README.md)
+- [Ćwiczenia_38-43_java-Swing_JDBC_JTable_v1](cwiczenia/Ćwiczenia_38-43_java-Swing_JDBC_JTable_v1/README.md)
+- [Ćwiczenia_44-45_java-Swing_Enum_Grid_JSlider_v3](cwiczenia/Ćwiczenia_44-45_java-Swing_Enum_Grid_JSlider_v3/README.md)
+
 
 <!-- SPIS_TREŚCI_END -->

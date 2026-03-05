@@ -1,4 +1,4 @@
-# Ćwiczenia 18-23 -- tworzenie listy
+# Ćwiczenia 21-25 -- tworzenie listy
 
 💡Na koniec zajęć prześlij pliki źródłowe i z danymi, wynikami do zasobu w
 teams.
