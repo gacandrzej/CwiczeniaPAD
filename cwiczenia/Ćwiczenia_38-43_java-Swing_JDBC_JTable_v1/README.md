@@ -23,15 +23,36 @@ Potrzebne obrazki ściągnij z teams.
 1. Zaimportuj dane i struktury
 
 ```sql
-CREATE TABLE IF NOT EXISTS towary (
-    id_towaru INT PRIMARY KEY AUTO_INCREMENT,
-    nazwa VARCHAR(255) NOT NULL,
-    opis TEXT,
-    cena_jednostkowa DECIMAL(10, 2) NOT NULL,
-    ilosc_dostepna INT NOT NULL DEFAULT 0,
-    data_dodania TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+  CREATE TABLE IF NOT EXISTS towary (
+      id_towaru INT PRIMARY KEY AUTO_INCREMENT,
+      nazwa VARCHAR(255) NOT NULL,
+      opis TEXT,
+      cena_jednostkowa DECIMAL(10, 2) NOT NULL,
+      ilosc_dostepna INT NOT NULL DEFAULT 0,
+      data_dodania TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  );
 ```
+
+   Dane do tabeli towary:
+
+   ```sql
+      INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Laptop Lenovo ThinkPad X1 Carbon', 'Wydajny laptop biznesowy z ekranem 14 cali', 5500.00, 15);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Mysz Logitech MX Master 3S', 'Ergonomiczna mysz bezprzewodowa', 320.00, 50);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Monitor Dell UltraSharp U2723QE', 'Monitor 27 cali 4K USB-C Hub', 1800.00, 25);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Klawiatura Mechaniczna Corsair K70 RGB MK.2', 'Gamingowa klawiatura mechaniczna z podświetleniem RGB', 650.00, 30);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Słuchawki Bezprzewodowe Sony WH-1000XM5', 'Redukcja szumów, wysoka jakość dźwięku', 1400.00, 40);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Dysk SSD Samsung 980 PRO 1TB NVMe', 'Szybki dysk SSD PCIe 4.0', 450.00, 60);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Smartfon Apple iPhone 15 Pro Max 256GB', 'Najnowszy flagowy smartfon Apple', 6800.00, 10);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Tablet Samsung Galaxy Tab S9+ Wi-Fi', 'Wydajny tablet z rysikiem S Pen', 3500.00, 20);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Drukarka Laserowa Brother HL-L2350DW', 'Czarno-biała drukarka laserowa z Wi-Fi', 400.00, 35);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Router Bezprzewodowy TP-Link Archer AX55', 'Router Wi-Fi 6 Dual-Band', 280.00, 45);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Kamera Internetowa Logitech C920s HD Pro', 'Kamera internetowa Full HD 1080p', 220.00, 55);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Głośniki Komputerowe Logitech Z407 Bluetooth', 'Głośniki 2.1 z subwooferem i Bluetooth', 300.00, 30);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Pendrive SanDisk Ultra Flair 64GB USB 3.0', 'Szybki pendrive USB 3.0', 50.00, 100);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Torba na Laptopa Targus CityLite Pro 15.6"', 'Profesjonalna torba na laptopa', 180.00, 65);
+    INSERT INTO towary (nazwa, opis, cena_jednostkowa, ilosc_dostepna) VALUES ('Kabel HDMI 2.1 o długości 2m', 'Kabel HDMI 8K Ultra High Speed', 40.00, 80);
+
+   ```
 
 1. Sprawdzić w xampp czy baza powstała i zawiera tabele z danymi.
 
