@@ -47,15 +47,13 @@ Potrzebne obrazki ściągnij z teams.
 
 1. Wykonaj przykładowy kod testujący połączenie
 
-   ![image4](media/image4.png)
-
 1. Odczytaj dane i wyświetl w jtable
 
    ![image5](media/image5.png)
 
 1. Wynik wykonania:
 
-   ```text 
+   ```text
     1 Laptop Lenovo ThinkPad X1 Carbon Wydajny laptop biznesowy z ekranem 14 cali 5500.0 15 2025-04-15
     2 Mysz Logitech MX Master 3S Ergonomiczna mysz bezprzewodowa 320.0 50 2025-04-15
     3 Monitor Dell UltraSharp U2723QE Monitor 27 cali 4K USB-C Hub 1800.0 25 2025-04-15
