@@ -59,7 +59,7 @@ Potrzebne obrazki ściągnij z teams.
 1. Załóż konto w xampp z dostępem do bazy sklep o nazwie twoje imię.
 
    ```sql
-   CREATE USER 'sprzedawca'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';
+   CREATE USER 'sprzedawca'@'localhost' IDENTIFIED BY '********';
    GRANT ALL PRIVILEGES ON `sklep`.* TO 'sprzedawca'@'localhost';
    ```
 
@@ -85,6 +85,10 @@ Potrzebne obrazki ściągnij z teams.
    ![image3](media/image3.png)
 
 1. Wykonaj przykładowy kod testujący połączenie
+
+   ```java
+   try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+   ```
 
 1. Odczytaj dane i wyświetl w jtable
 
