@@ -22,16 +22,16 @@ Potrzebne obrazki ściągnij z teams.
 
 1. Zaimportuj dane i struktury
 
-```sql
-  CREATE TABLE IF NOT EXISTS towary (
+   ```sql
+   CREATE TABLE IF NOT EXISTS towary (
       id_towaru INT PRIMARY KEY AUTO_INCREMENT,
       nazwa VARCHAR(255) NOT NULL,
       opis TEXT,
       cena_jednostkowa DECIMAL(10, 2) NOT NULL,
       ilosc_dostepna INT NOT NULL DEFAULT 0,
       data_dodania TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-  );
-```
+   );
+   ```
 
    Dane do tabeli towary:
 
@@ -58,7 +58,14 @@ Potrzebne obrazki ściągnij z teams.
 
 1. Załóż konto w xampp z dostępem do bazy sklep o nazwie twoje imię.
 
+   ```sql
+   CREATE USER 'sprzedawca'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';
+   GRANT ALL PRIVILEGES ON `sklep`.* TO 'sprzedawca'@'localhost';
+   ```
+
 1. Włącz plugin DB Navigator.
+
+   ![db_navigator](../../media/2026-04-27-12-06-53.png)
 
 1. Przejdź do Database Browser
 
