@@ -92,6 +92,10 @@ Potrzebne obrazki ściągnij z teams.
 
 1. Sprawdź wynik zapytania dla tabeli towary:
 
+   ```sql
+   SELECT * FROM towary;
+   ```
+
    ![sql_wynik_towary](../../media/2026-04-27-12-17-20.png)
 
 1. Odczytaj dane i wyświetl w jtable
@@ -117,6 +121,10 @@ Potrzebne obrazki ściągnij z teams.
     14 Torba na Laptopa Targus CityLite Pro 15.6" Profesjonalna torba na laptopa 180.0 65 2025-04-15
     15 Kabel HDMI 2.1 o długości 2m Kabel HDMI 8K Ultra High Speed 40.0 80 2025-04-15i
    ```
+
+1. Przetestuj aplikację
+
+   ![widok_apki_sklep](../../media/2026-04-27-12-26-46.png)
 
 1. Dodaj testy i klasę testową:
 
