@@ -20,7 +20,18 @@ Potrzebne obrazki ściągnij z teams.
 
    <https://regex101.com/>
 
-1. Zaimportuj dane i struktury z pliku sklep.sql
+1. Zaimportuj dane i struktury
+
+```sql
+CREATE TABLE IF NOT EXISTS towary (
+    id_towaru INT PRIMARY KEY AUTO_INCREMENT,
+    nazwa VARCHAR(255) NOT NULL,
+    opis TEXT,
+    cena_jednostkowa DECIMAL(10, 2) NOT NULL,
+    ilosc_dostepna INT NOT NULL DEFAULT 0,
+    data_dodania TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
 
 1. Sprawdzić w xampp czy baza powstała i zawiera tabele z danymi.
 
