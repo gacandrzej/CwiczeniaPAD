@@ -90,6 +90,10 @@ Potrzebne obrazki ściągnij z teams.
    try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
    ```
 
+1. Sprawdź wynik zapytania dla tabeli towary:
+
+   ![sql_wynik_towary](../../media/2026-04-27-12-17-20.png)
+
 1. Odczytaj dane i wyświetl w jtable
 
    ![image5](media/image5.png)
