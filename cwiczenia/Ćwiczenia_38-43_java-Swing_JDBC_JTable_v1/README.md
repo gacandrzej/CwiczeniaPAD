@@ -98,6 +98,35 @@ Potrzebne obrazki ściągnij z teams.
 
    ![sql_wynik_towary](../../media/2026-04-27-12-17-20.png)
 
+1. Stwórz tabelę zamówienia
+
+   ```sql
+   CREATE TABLE IF NOT EXISTS zamowienia (
+    id_zamowienia INT PRIMARY KEY AUTO_INCREMENT,
+    id_klienta INT NOT NULL,
+    data_zamowienia TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    status VARCHAR(50) DEFAULT 'Nowe',
+    wartosc_calkowita DECIMAL(10, 2)
+    -- FOREIGN KEY (id_klienta) REFERENCES klienci(id_klienta)
+   );
+   ```
+
+   Wstaw dane:
+
+   ```sql
+   INSERT INTO zamowienia (id_klienta) VALUES (101);
+   INSERT INTO zamowienia (id_klienta, status) VALUES (102, 'W realizacji');
+   INSERT INTO zamowienia (id_klienta, status) VALUES (103, 'Zakończone');
+   INSERT INTO zamowienia (id_klienta) VALUES (101);
+   INSERT INTO zamowienia (id_klienta, status) VALUES (104, 'Nowe');
+   INSERT INTO zamowienia (id_klienta, status) VALUES (102, 'Wysłane');
+   INSERT INTO zamowienia (id_klienta) VALUES (105);
+   INSERT INTO zamowienia (id_klienta, status) VALUES (103, 'Zwrócone');
+   INSERT INTO zamowienia (id_klienta) VALUES (104);
+   INSERT INTO zamowienia (id_klienta, status) VALUES (101, 'Przygotowane do wysyłki');
+
+   ```
+
 1. Odczytaj dane i wyświetl w jtable
 
    ![image5](media/image5.png)
