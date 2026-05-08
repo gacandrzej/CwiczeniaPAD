@@ -151,7 +151,7 @@ Potrzebne obrazki ściągnij z teams.
     15 Kabel HDMI 2.1 o długości 2m Kabel HDMI 8K Ultra High Speed 40.0 80 2025-04-15i
    ```
 
-1. Przetestuj aplikację
+1. Dodaj obsługę, a następnie przetestuj aplikację dla akcji edytuj, usuń i dodaj towar. Dodaj zakładkę Zamówienia i wyświetl dane.
 
    ![widok_apki_sklep](../../media/2026-04-27-12-26-46.png)
 
