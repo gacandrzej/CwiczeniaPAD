@@ -166,6 +166,14 @@ Potrzebne obrazki ściągnij z teams.
 
    ![widok_apki_sklep](../../media/2026-04-27-12-26-46.png)
 
+1. Dodaj potrzebne biblioteki do testów JUINT5:
+
+   ![libs](media/libs.png)
+
+   ![moduly](media/moduly.png)
+
+   ![biblioteki](media/pelnelibrarys.png)
+
 1. Dodaj testy i klasę testową:
 
    ```java
