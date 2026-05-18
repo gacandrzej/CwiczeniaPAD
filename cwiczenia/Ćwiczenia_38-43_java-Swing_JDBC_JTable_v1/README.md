@@ -96,6 +96,17 @@ Potrzebne obrazki ściągnij z teams.
    SELECT * FROM towary;
    ```
 
+   ```java
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM towary");
+
+        while (rs.next()) {
+
+            System.out.println(rs.getString("nazwa"));
+
+        }
+   ```
+
    ![sql_wynik_towary](../../media/2026-04-27-12-17-20.png)
 
 1. Stwórz tabelę zamówienia
