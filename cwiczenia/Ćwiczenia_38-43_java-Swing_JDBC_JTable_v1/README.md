@@ -162,6 +162,57 @@ Potrzebne obrazki ściągnij z teams.
     15 Kabel HDMI 2.1 o długości 2m Kabel HDMI 8K Ultra High Speed 40.0 80 2025-04-15i
    ```
 
+1. Dodaj klasę Towar:
+
+   ```java
+   public class Towar {
+    private int id;
+    private String nazwa;
+    private String opis;
+    private BigDecimal cenaJednostkowa;
+    private int iloscDostepna;
+    private LocalDateTime dataDodania;
+
+    public Towar(int id, String nazwa, String opis, BigDecimal cenaJednostkowa, int iloscDostepna, LocalDateTime dataDodania) {
+        this.id = id;
+        this.nazwa = nazwa;
+        this.opis = opis;
+        this.cenaJednostkowa = cenaJednostkowa;
+        this.iloscDostepna = iloscDostepna;
+        this.dataDodania = dataDodania;
+    }
+   ```
+
+   dodaj gettery.
+
+1. Dodaj klasę TowaryRepository:
+
+   ```java
+   import pad.sql.separation.model.Towar;
+
+    import java.sql.*;
+    import java.util.ArrayList;
+    import java.util.List;
+
+    public class TowaryRepository {
+        private final String DB_URL = "jdbc:mysql://localhost:3306/sklep";
+        private final String USER = "sprzedawca";
+        private final String PASS = "******************";
+    public void edytuj(Towar t) throws SQLException {
+            String sql = "UPDATE towary SET nazwa=?, opis=?, cena_jednostkowa=?, ilosc_dostepna=? WHERE id_towaru=?";
+            try (Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+                pstmt.setString(1, t.getNazwa());
+                pstmt.setString(2, t.getOpis());
+                pstmt.setBigDecimal(3, t.getCenaJednostkowa());
+                pstmt.setInt(4, t.getIloscDostepna());
+                pstmt.setInt(5, t.getId());
+                pstmt.executeUpdate();
+            }
+        }
+
+   ```
+
 1. Dodaj obsługę, a następnie przetestuj aplikację dla akcji szukaj, edytuj, usuń i dodaj towar. Dodaj zakładkę Zamówienia i wyświetl dane.
 
    ![widok_apki_sklep](../../media/2026-04-27-12-26-46.png)
@@ -177,22 +228,80 @@ Potrzebne obrazki ściągnij z teams.
 1. Dodaj testy i klasę testową:
 
    ```java
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-    import pad.sql.simple.TestJDBC;
+      import org.junit.jupiter.api.*;
 
+    import pad.sql.separation.model.Towar;
+    import java.math.BigDecimal;
     import java.sql.SQLException;
     import java.util.List;
+    import static org.junit.jupiter.api.Assertions.*;
 
-    import static org.junit.Assert.assertNotNull;
-    import static org.junit.Assert.assertTrue;
+    @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+    class TowaryRepositoryTest {
 
-   @Test
-    public void testNotNullList() throws SQLException {
+        private TowaryRepository repo;
 
-        assertNotNull("Lista nie powinna być null", towary);
+        @BeforeEach
+        public void setUp() {
+            repo = new TowaryRepository();
+        }
+
+        @AfterEach
+        public void tearDown() {
+            repo = null;
+        }
+
+        @Test
+        @Order(1)
+        public void testDodajTowar() throws SQLException {
+            Towar nowy = new Towar(0, "Produkt Testowy", "Opis", new BigDecimal("10.00"), 5, null);
+            repo.dodaj(nowy);
+
+            List<Towar> wynik = repo.szukaj("Produkt Testowy");
+            assertFalse(wynik.isEmpty(), "Towar powinien zostać dodany");
+        }
+
+        @Test
+        @Order(2)
+        public void testEdytujTowar() throws SQLException {
+            // Znajdujemy dodany wcześniej towar
+            List<Towar> lista = repo.szukaj("Produkt Testowy");
+            Towar doEdycji = lista.get(0);
+
+            // Edytujemy
+            Towar edytowany = new Towar(doEdycji.getId(), "Produkt Po Edycji", "Nowy Opis",
+                    new BigDecimal("20.00"), 10, null);
+            repo.edytuj(edytowany);
+
+            // Weryfikujemy
+            List<Towar> wynik = repo.szukaj("Produkt Po Edycji");
+            assertEquals("Produkt Po Edycji", wynik.get(0).getNazwa());
+            assertEquals(0, new BigDecimal("20.00").compareTo(wynik.get(0).getCenaJednostkowa()));
+        }
+
+        @Test
+        @Order(3)
+        public void testUsunTowar() throws SQLException {
+            // Znajdujemy towar po edycji
+            List<Towar> lista = repo.szukaj("Produkt Po Edycji");
+            int id = lista.get(0).getId();
+
+            // Usuwamy
+            repo.usun(id);
+
+            // Sprawdzamy czy zniknął
+            List<Towar> wynik = repo.szukaj("Produkt Po Edycji");
+            assertTrue(wynik.isEmpty(), "Towar powinien zostać usunięty");
+        }
+
+        @Test
+        public void testPobierzWszystkie() throws SQLException {
+            List<Towar> towary = repo.szukaj("");
+            assertNotNull(towary);
+            // Sprawdzamy czy lista nie jest null 
+        }
     }
+
    ```
 
 1. KONIEC.🔚
