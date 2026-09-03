@@ -25,87 +25,102 @@ teams.
    ![image5](media/image5.png)
    ![image6](media/image6.png)
 
-1. ![image7](media/image7.png)
-    Utwórz gettery i setery dla wszystkich
+1. Utwórz gettery i setery dla wszystkich
     pól.
-2. Testujemy gettery i setery dla wszystkich pól, ale najpierw utwórz
-    konstruktor bezargumentowy:
-![image8](media/image8.png)
-3. Stwórz obiekt i nadaj/odczytaj wartości:
-![image9](media/image9.png)
-![image10](media/image10.png)
-4. Widok po teście ( o ile dodasz wersję java 25):
 
-> ![image11](media/image11.png)
+   ![image7](media/image7.png)
+
+1. Testujemy gettery i setery dla wszystkich pól, ale najpierw utwórz
+    konstruktor bezargumentowy:
+
+   ![image8](media/image8.png)
+
+1. Stwórz obiekt i nadaj/odczytaj wartości:
+
+   ![image9](media/image9.png)
+
+   ![image10](media/image10.png)
+
+1. Widok po teście ( o ile dodasz wersję java 25):
+
+   ![image11](media/image11.png)
 
 1. Utwórz klasę potomną o nazwie Laptop, na package komputery prawy
     klawisz myszy i New:
 
-> ![image12](media/image12.png)
->
-> ![image13](media/image13.png)
+   ![image12](media/image12.png)
+
+   ![image13](media/image13.png)
 
 1. Dodaj trzy nowe pola:
 
-> ![image14](media/image14.png)
+   ![image14](media/image14.png)
 
 1. Dodaj konstruktor z klasy nadrzędnej z uwzględnieniem nowych pól:
 
-> ![image15](media/image15.png)
->
-> W drugim kroku:
->
-> ![image16](media/image16.png)
->
-> ![image17](media/image17.png)
+   ![image15](media/image15.png)
+
+   W drugim kroku:
+
+   ![image16](media/image16.png)
+
+   ![image17](media/image17.png)
 
 1. Dodaj metodę toString w klasie Komputer oraz w Laptop:
 
-> ![image18](media/image18.png)
-W klasie Laptop ( dopisz super.toString()):
-![image20](media/image20.png)
+   ![image18](media/image18.png)
+
+   W klasie Laptop ( dopisz super.toString()):
+
+   ![image20](media/image20.png)
 
 1. Utwórz obiekt klasy Laptop i nadaj/odczytaj wartości:
 
-> ![image21](media/image21.png)
+   ![image21](media/image21.png)
 
 1. Utwórz metodę włącz w klasie nadrzędnej Komputer:
 
-> ![image22](media/image22.png)
+   ![image22](media/image22.png)
 
 1. Nadpisz metodę włącz() w klasie Laptop:
 
-> ![image23](media/image23.png)
->
-> Dla klasy Laptop:
->
-> ![image24](media/image24.png)
+   ![image23](media/image23.png)
+
+   Dla klasy Laptop:
+
+   ![image24](media/image24.png)
 
 1. Przetestuj polimorfizm.
 
-> ![image25](media/image25.png)
->
-> ![image26](media/image26.png)
+   ![image25](media/image25.png)
 
-1. ![image27](media/image27.png)
-    Utwórz klasę potomną o nazwie
-    Smartfon.
-2. Dodaj wszystko tak jak dla klasy Laptop.
+   ![image26](media/image26.png)
 
-> ![image28](media/image28.png)
+1. Utwórz klasę potomną o nazwie Smartfon.
 
-1. ![image29](media/image29.png)
-    Wykonaj testy.
-2. Dodaj nowy package i utwórz klasę nadrzędną oraz dwie potomne według
+   ![image27](media/image27.png)
+
+1. Dodaj wszystko tak jak dla klasy Laptop.
+
+   ![image28](media/image28.png)
+
+1. Wykonaj testy.
+
+   ![image29](media/image29.png)
+
+1. Dodaj nowy package i utwórz klasę nadrzędną oraz dwie potomne według
     własnego pomysłu, testuj analogicznie jak wcześniej.
-3. Dodatkowe zadania:
-    a)  Dodaj klasę Desktop oraz potomną dla niej GamingDesktop,
-    b)  Zaimplementuj metody equals() i hashCode()
 
-> ![image30](media/image30.png)
-c)  Dodaj test
-> ![image31](media/image31.png)
->
-> ![image32](media/image32.png)
+1. Dodatkowe zadania:
+   - Dodaj klasę Desktop oraz potomną dla niej GamingDesktop,
+   - Zaimplementuj metody equals() i hashCode()
+
+   ![image30](media/image30.png)
+
+   - dodaj test
+
+   ![image31](media/image31.png)
+
+   ![image32](media/image32.png)
 
 1. KONIEC.
