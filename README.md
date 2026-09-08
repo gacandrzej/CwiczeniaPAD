@@ -2,6 +2,7 @@
 <!-- SPIS_TREŚCI_START -->
 ## 📚 Spis Ćwiczeń
 
+- [Ćwiczenia_0_java_c++_python](/cwiczenia/%C4%86wiczenia_0_java_c%2B%2B_python/README.md)
 - [Ćwiczenia_1_java-podstawy_metody_v4](cwiczenia/Ćwiczenia_1_java-podstawy_metody_v4/README.md)
 - [Ćwiczenia_2_java-petle_tablice_menu_v3](cwiczenia/Ćwiczenia_2_java-petle_tablice_menu_v3/README.md)
 - [Ćwiczenia_3_java-pliki_RandomAccessFile_tablice_v4](cwiczenia/Ćwiczenia_3_java-pliki_RandomAccessFile_tablice_v4/README.md)
