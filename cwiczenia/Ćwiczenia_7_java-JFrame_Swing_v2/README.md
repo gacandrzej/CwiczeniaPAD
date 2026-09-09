@@ -46,50 +46,57 @@ teams.
 
 1. Sprawdź widok okna:
 
-> ![image9](media/image9.png)
+   ![image9](media/image9.png)
 
 1. Dodaj menadżer układu na FlowLayout:
 
-> ![image10](media/image10.png)
+   ![image10](media/image10.png)
 
-1. ![image11](media/image11.png)
-    Dodaj ikonkę dla aplikacji:
-2. Zadeklaruj etykietę, pole tekstowe oraz przycisk:
+1. Dodaj ikonkę dla aplikacji:
 
-> ![image12](media/image12.png)
+   ![image11](media/image11.png)
+
+1. Zadeklaruj etykietę, pole tekstowe oraz przycisk:
+
+   ![image12](media/image12.png)
 
 1. Dodaj komponenty do panelu:
 
-> ![image13](media/image13.png)
+   ![image13](media/image13.png)
 
 1. Realizacja:
 
-> ![image14](media/image14.png)
+   ![image14](media/image14.png)
 
 1. Zadanie 3: Zmień tło dla przycisku oraz kolor tekstu:
-![image15](media/image15.png)
-2. Zmień kolory dla przycisku po jego kliknięciu dodaj okno wiadomości
-    z podanym imieniem:
-![image16](media/image16.png)
-3. Ustaw przycisk na nieaktywny:
 
-> ![image17](media/image17.png)
+   ![image15](media/image15.png)
+
+1. Zmień kolory dla przycisku po jego kliknięciu dodaj okno wiadomości
+    z podanym imieniem:
+
+   ![image16](media/image16.png)
+
+1. Ustaw przycisk na nieaktywny:
+
+   ![image17](media/image17.png)
 
 1. Przygotuj wcześniej 100 liczb i je posortuj:
 
-> ![image18](media/image18.png)
+   ![image18](media/image18.png)
 
 1. Dodaj przycisk sortowania i JTextArea na wyniki:
 
-> ![image19](media/image19.png)
+   ![image19](media/image19.png)
 
 1. Pamiętaj o dodaniu komponentów do panelu:
 
-> ![image20](media/image20.png)
+   ![image20](media/image20.png)
 
 1. Uruchomienie:
 
-> ![image21](media/image21.png)
-> ![image22](media/image22.png)
+   ![image21](media/image21.png)
 
-1. KONIEC.
+   ![image22](media/image22.png)
+
+1. KONIEC.🔚
