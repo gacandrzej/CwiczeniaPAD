@@ -75,6 +75,19 @@ teams.
 
    ![image7](media/image7.png)
 
+   ```java
+    // sposób nowy, java 25+ oraz zamiana int na float, bez scannera
+   // poleTrójkąta();
+    IO.println("Liczymy pole trójkąta!");
+    IO.println("Podaj podstawę: ");
+    String pod = IO.readln();
+    float pods = Float.parseFloat(pod);
+    IO.println("Podaj wysokość:");
+    String wys = IO.readln();
+    float wyso = Float.parseFloat(wys);
+    IO.println("Pole=" + pods*wyso/2);
+   ```
+
 1. Przykładowa realizacja zadania 3:
 
    Napisz metodę zwracającą objętość walca, która posiada dwa argumenty:
