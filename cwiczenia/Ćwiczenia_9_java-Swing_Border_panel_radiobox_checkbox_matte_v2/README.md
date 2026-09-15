@@ -86,6 +86,6 @@ teams.
 1. Podziel kod na poszczególne panele
     jako osobne klasy, również panel główny.( 45 minut )
 
-  ![image15](media/image15.png)
+   ![image15](media/image15.png)
 
-1. KONIEC.🔚
+1. KONIEC. 🔚
