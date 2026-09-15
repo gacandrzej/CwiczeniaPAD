@@ -1,54 +1,91 @@
-Ćwiczenia 9 -- praca z JFrame, border, podział na klasy
+# Ćwiczenia 9 -- praca z JFrame, border, podział na klasy
+
 Na koniec zajęć prześlij pliki źródłowe i z danymi, wynikami do zasobu w
 teams.
-1.  Utwórz nowy projekt w katalogu na dysku C:
-2.  Użyte w ćwiczeniach biblioteki: ( zostaną zaimportowane
+
+1. Utwórz nowy projekt w katalogu na dysku C:
+
+1. Użyte w ćwiczeniach biblioteki: ( zostaną zaimportowane
     automatycznie).
-3.  Otwórz dokumentację:
-> <https://docs.oracle.com/javase/tutorial/uiswing/components/border.html>
->
-> <https://docs.oracle.com/javase/8/docs/api/javax/swing/BorderFactory.html>
-4.  Dodaj nowy package o nazwie cwiczenia8.
-5.  Dodaj nową klasę o nazwie Okno dziedziczące po JFrame.
-6.  Ściągnij z teams plik picture.zip
-7.  Dla panelu ustaw:
-> ![](media/image1.png)
-8.  Efekt końcowy:
-![](media/image2.png)
-9.  Utwórz obramowanie z tytułem: testowanie obramowań dla panelu.
-10. Dodaj etykietę (tylko ikona ), pole tekstowe i przycisk z ikoną i
+
+1. Otwórz dokumentację:
+
+   <https://docs.oracle.com/javase/tutorial/uiswing/components/border.html>
+
+   <https://docs.oracle.com/javase/8/docs/api/javax/swing/BorderFactory.html>
+
+1. Dodaj nowy package o nazwie cwiczenia9.
+
+1. Dodaj nową klasę o nazwie Okno dziedziczące po JFrame.
+
+1. Ściągnij z teams plik picture.zip lub animal.zip
+
+1. Dla panelu ustaw:
+
+   ![image1](media/image1.png)
+
+1. Efekt końcowy:
+
+   ![image2](media/image2.png)
+
+1. Utwórz obramowanie z tytułem: testowanie obramowań dla panelu.
+
+1. Dodaj etykietę (tylko ikona ), pole tekstowe i przycisk z ikoną i
     tekstem, następnie dodaj obramowania.
-11. Dodaj sekcję dla trzech przycisków radio.
-12. Realizacja: Utwórz obramowanie z tytułem: testowanie obramowań dla
-    panelu.
-![](media/image3.png)
-13. ![](media/image4.png)
-    Realizacja: Dodaj etykietę (tylko ikona ), pole
+
+1. Dodaj sekcję dla trzech przycisków radio.
+
+1. Realizacja: Utwórz obramowanie z tytułem: testowanie obramowań dla panelu.
+
+   ![image3](media/image3.png)
+
+1. Realizacja: Dodaj etykietę (tylko ikona ), pole
     tekstowe i przycisk z ikoną i tekstem, następnie dodaj obramowania.
-14. Realizacja: Dodaj sekcję dla trzech przycisków radio.
-15. ![](media/image5.png)
-    Dodanie radio:
-16. Zgrupowanie radio:
-> ![](media/image6.png)
-17. Dodanie nowego panelu
-> ![](media/image7.png)
-18. ![](media/image8.png)
-    Dodać elementy do nowego panelu:
-19. Dodanie panelu do głównego panelu:
-> ![](media/image9.png)
-20. ![](media/image10.png)
-    Dodaj panel z układem BoxLayout dla
+
+   ![image4](media/image4.png)
+
+1. Realizacja: Dodaj sekcję dla trzech przycisków radio.
+
+1. Dodanie radio:
+
+   ![image5](media/image5.png)
+
+1. Zgrupowanie radio:
+
+   ![image6](media/image6.png)
+
+1. Dodanie nowego panelu
+
+   ![image7](media/image7.png)
+
+1. Dodać elementy do nowego panelu:
+
+   ![image8](media/image8.png)
+
+1. Dodanie panelu do głównego panelu:
+
+   ![image9](media/image9.png)
+
+1. Dodaj panel z układem BoxLayout dla
     elementów checkbox, obok radiopanel:
-> Rozwiązanie:
->
-> ![](media/image11.png)
->
-> ![](media/image12.png)
-21. Dodaj nowy panel dla obramowania poprzez ikonę.
-> ![](media/image13.png)
->
-> ![](media/image14.png)
-22. ![](media/image15.png)
-    Podziel kod na poszczególne panele
+
+   ![image10](media/image10.png)
+
+   Rozwiązanie:
+
+   ![image11](media/image11.png)
+
+   ![image12](media/image12.png)
+
+1. Dodaj nowy panel dla obramowania poprzez ikonę.
+
+   ![image13](media/image13.png)
+
+   ![image14](media/image14.png)
+
+1. Podziel kod na poszczególne panele
     jako osobne klasy, również panel główny.( 45 minut )
-23. KONIEC.
+
+  ![image15](media/image15.png)
+
+1. KONIEC.🔚
