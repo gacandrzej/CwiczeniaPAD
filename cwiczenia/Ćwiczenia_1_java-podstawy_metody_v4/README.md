@@ -116,6 +116,44 @@ teams.
 
    // pyramid
 
-1. Rozbić kod na klasy.
+1. Rozbić kod na klasy dla pól i objętości.
+
+   Klasa dla pól:
+
+   ```java
+   public class PolaFigurPlaskich {
+
+    public double poleTrójkąta(double a, double h) {
+        return a*h/2;
+    }
+
+   }
+   ```
+
+   Klasa dla objętości:
+
+   ```java
+   public class ObjetoscBryl {
+
+    public double objWalca(double r, double h) {
+        return Math.PI*Math.pow(r,2)*h;
+    }
+   }
+   ```
+1. Popraw wywołania tych metod.
+
+   ```java
+   Scanner klawiatura = new Scanner(System.in);
+
+        System.out.println("Obliczamy pole trójkąta!");
+        System.out.print("Podaj dł. podstawy:");
+        double podstawa = klawiatura.nextDouble();
+        System.out.print("Podaj dł. wysokości:");
+        double wysokość = klawiatura.nextDouble();
+        // System.out.println("Pole="+podstawa*wysokość/2);
+        PolaFigurPlaskich pfp = new PolaFigurPlaskich();
+
+        System.out.println("Pole="+pfp.poleTrójkąta(podstawa,wysokość));
+   ```
 
 1. KONIEC.
