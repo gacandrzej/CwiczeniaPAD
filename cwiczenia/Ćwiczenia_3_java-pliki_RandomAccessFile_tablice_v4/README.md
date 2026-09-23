@@ -42,6 +42,16 @@ teams.
 
    ![image5](media/image5.png)
 
+   Dodaj kod:
+   ```java
+        File file = new File(Config.PATH);
+        System.out.println("Rozmiar pliku:" + file.length());
+        System.out.println("Nazwa pliku:" + file.getName());
+        System.out.println("Ścieżka pliku:" + file.getPath());
+        System.out.println("Pełna ścieżka pliku:" + file.getAbsolutePath());
+
+   ```
+
 1. Zadanie 7: Utwórz metodę odczytującą liczby z pliku.
 
    ![image6](media/image6.png)
