@@ -64,6 +64,7 @@ teams.
 
    TabliceLiczbRzeczywistych o2 = new TabliceLiczbRzeczywistych();
    ```
+   Zrealizuj powyższe przykłady dla tablicy dwuwymiarowej.
 
 1. Wykorzystaj kod do realizacji zadania domowego.
 
