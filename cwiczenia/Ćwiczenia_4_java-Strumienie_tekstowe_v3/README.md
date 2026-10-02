@@ -27,6 +27,7 @@ teams.
    ```java
    public static final String PATH_FILE = "plik_writera.txt";
     public static final String PATH_FILE_2 = "plik_buffered-writera.txt";
+   public static final String PATH_FILE_3 = "plik_print-writera.txt";
 
     void main() {
         IO.println(String.format("Praca ze strumieniami!"));
@@ -159,7 +160,56 @@ teams.
 
    ![image6](media/image6.png)
 
-   ![image7](media/image7.png)
+   ```java
+   private void zapisPrintWriter() {
+        Date date = new Date();
+        IO.println("date="+date);
+        System.out.printf("%tT",date);
+        System.out.println(System.lineSeparator());
+        System.out.printf("%s %tB %<te, %<tY", " Current date: ", date);
+        /*
+        Let’s look at the available format specifiers available for printf:
+        %c character
+        %d decimal (integer) number (base 10)
+        %e exponential floating-point number
+        %f floating-point number
+        %i integer (base 10)
+        %o octal number (base 8)
+        %s String
+        %u unsigned decimal (integer) number
+        %x number in hexadecimal (base 16)
+        %t formats date/time
+        %% print a percent sign
+        \% print a percent sign
+         */
+        try (PrintWriter printWriter = new PrintWriter(PATH_FILE_3)) {
+
+            printWriter.println("Regular text!!!");
+            printWriter.println(3.23f);
+            printWriter.write(67);
+            printWriter.printf("\n%d\n",35);
+            printWriter.printf("Liczba e=%.2f %n",Math.E);
+            /*
+            Date formatting has the following special characters
+            A/a - Full day/Abbreviated day B/b - Full month/Abbreviated month
+            d - formats a two-digit day of the month
+            m - formats a two-digit month
+            Y - Full year/Last two digits of the Year
+            j - Day of the year
+            ‘H’, ‘M’, ‘S’ - Hours, Minutes, Seconds ‘L’, ‘N’ – to represent
+            the time in milliseconds and nanoseconds accordingly
+            ‘p’ – AM/PM ‘z’ – prints out the difference from GMT.
+             */
+            printWriter.printf("%tT",date);
+            printWriter.printf("%s %tB %<te, %<tY", " Current date: ", date);
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+   ```
 
 1. Realizacja: Odczytaj dane zapisane PrintWriterem za pomocą BufferedReadera.
 
