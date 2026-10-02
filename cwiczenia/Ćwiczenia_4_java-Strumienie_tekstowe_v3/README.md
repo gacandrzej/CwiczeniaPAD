@@ -33,6 +33,7 @@ teams.
        // testFileWriter();
        // testOdczytuScanner();
         testOdczytuFileReader();
+        testZapisuBufferedWriter();
     }
    ```
 
@@ -87,6 +88,7 @@ teams.
 
     }
    ```
+
 1. Realizacja: Utwórz metodę do odczytu danych strumieniem FileReader.
 
    ```java
@@ -133,7 +135,20 @@ teams.
 
    <https://docs.oracle.com/javase/8/docs/api/java/io/FileReader.html>
 
-   ![image5](media/image5.png)
+   ```java
+   private void testBufferedReader() {
+        String line;
+        try (BufferedReader br = new BufferedReader(new FileReader(PATH_FILE_2))) {
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+   ```
 
 1. Realizacja: Utwórz metodę zapisującą dane: tekst, liczbę całkowitą,
     rzeczywistą oraz datę do pliku z pomocą PrintWritera.
