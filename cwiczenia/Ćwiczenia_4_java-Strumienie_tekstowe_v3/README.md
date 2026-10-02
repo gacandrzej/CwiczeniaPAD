@@ -213,11 +213,34 @@ teams.
 
 1. Realizacja: Odczytaj dane zapisane PrintWriterem za pomocą BufferedReadera.
 
-   ![image8](media/image8.png)
+   ```java
+   private static void odczytBufferedReader() {
+        int bufferSize =4096;
+        try (BufferedReader reader = new BufferedReader(new FileReader(PATH_FILE_3),bufferSize)) {
+            String s = "";
+            while((s = reader.readLine()) != null) {
+                System.out.println(s);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+   ```
 
    Wynik:
 
-   ![image9](media/image9.png)
+   ```text
+   Regular text!!!
+
+    3.23
+    C
+    35
+    Liczba e=2,72
+    13:47:18 Current date:  października 2, 2026
+
+   ```
 
 1. Wylosować 10 liczb i zapisać do pliku printwriterem oddzielając
     średnikiem każdą liczbę.
@@ -226,7 +249,20 @@ teams.
 
     Realizacja:
 
-    ![image10](media/image10.png)
+    ```java
+    private void losujZapiszLiczbyPrintWriter(int n) {
+        Random random = new Random();
+        try (PrintWriter pr = new PrintWriter(PATH_FILE_Liczby)) {
+            for (int i = 0; i < n; i++) {
+                pr.print(random.nextInt(10,100));
+                if (i < n - 1) pr.print(";");
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    ```
 
     Odczyt, na dwa sposoby:
 
