@@ -24,7 +24,17 @@ teams.
 
 1. Przykładowy kod wywołujący 4 pierwsze metody:
 
-   ![image1](media/image1.png)
+   ```java
+   public static final String PATH_FILE = "plik_writera.txt";
+    public static final String PATH_FILE_2 = "plik_buffered-writera.txt";
+
+    void main() {
+        IO.println(String.format("Praca ze strumieniami!"));
+       // testFileWriter();
+       // testOdczytuScanner();
+        testOdczytuFileReader();
+    }
+   ```
 
 1. Dokumentacja:
 
@@ -46,17 +56,72 @@ teams.
 
    <https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html>
 
-   ![image2](media/image2.png)
+   ```java
+   private void testFileWriter() {
+        try (FileWriter fw = new FileWriter(PATH_FILE)) {
+            fw.write("New York Knicks\n");
+            fw.write("Los Angeles Lakers\n");
+            fw.write("Toronto Raptors\n");
+            fw.write("Minesota Timberwolves");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+   ```
 
 1. Realizacja: Utwórz metodę do odczytu danych strumieniem Scanner.
 
-   ![image3](media/image3.png)
-
    <https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html>
+
+   ```java
+   private void testOdczytuScanner() {
+        String linia;
+        try (Scanner sc = new Scanner(new File(PATH_FILE))) {
+            while (sc.hasNextLine()) {
+                linia = sc.nextLine();
+                IO.println(linia);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+   ```
+1. Realizacja: Utwórz metodę do odczytu danych strumieniem FileReader.
+
+   ```java
+   private void testOdczytuFileReader() {
+        try (FileReader fr = new FileReader(new File(PATH_FILE))) {
+            int znak;
+            while ((znak = fr.read()) != -1) {
+                System.out.print((char) znak);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+   ```
 
 1. Realizacja: Utwórz metodę do zapisu danych strumieniem BufferedWriter.
 
-   ![image4](media/image4.png)
+   ```java
+    private void testBufferedWriter() {
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(PATH_FILE_2))) {
+            bw.write("Decathlon CMA CGM Team");
+            bw.newLine();
+            bw.write("Bahrain – Victorious");
+            bw.newLine();
+            bw.write("UAE Team Emirates – XRG");
+            bw.newLine();
+            bw.write("Lidl – Trek");
+            bw.newLine();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+   ```
 
    <https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWriter.html>
 
