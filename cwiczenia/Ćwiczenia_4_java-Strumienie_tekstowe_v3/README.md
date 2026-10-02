@@ -266,6 +266,22 @@ teams.
 
     Odczyt, na dwa sposoby:
 
+    ```java
+    private void odczytLiczbScannerDodanieDoListy() {
+        try (Scanner sc = new Scanner(new File(PATH_FILE_Liczby))) {
+            List<Integer> lista = new ArrayList<>();
+            sc.useDelimiter(";");
+            while (sc.hasNextInt()) {
+                int liczba = sc.nextInt();
+                lista.add(liczba);
+                IO.print(liczba+" ");
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    ```
+
     ![image11](media/image11.png)
 
 1. Wykorzystaj kod do realizacji zadania domowego.
