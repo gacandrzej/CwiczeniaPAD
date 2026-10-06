@@ -22,7 +22,9 @@ teams.
 1. Zadanie 1: PrintWriterem zapisać stringa z danymi
     dla trzech osób:
 
-   ![image1](media/image1.png)
+   ```java
+   String testData = "John,25,75000.50,true\nAnna,30,80000.75,false\nPiotr,35,90000.25,true";
+   ```
 
    Następnie sparsować i odczytać dane scanerem.
 
@@ -42,11 +44,54 @@ teams.
 1. Zadanie 4: Skopiować wybrany obrazek \*.png lub inny z pomocą
     FileInputStream /FileOutputStream,
 
-   ![image4](media/image4.png)
-
 1. Realizacja zadania 1:
 
-   ![image5](media/image5.png)
+   ```java
+   private static void testScanner() {
+        System.out.println("4. Scanner:");
+
+        // Używamy konkretnego delimitera
+        String testData = "John,25,75000.50,true\nAnna,30,80000.75,false\nPiotr,35,90000.25,true";
+
+        // Zapis danych
+        try (PrintWriter writer = new PrintWriter(tekstowyPath)) {
+            writer.print(testData);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // Odczyt z custom delimiterem
+        try (Scanner scanner = new Scanner(new File(tekstowyPath))) {
+            System.out.println("Odczyt z parsowaniem typów:");
+            /**
+             * \\r - carriage return (powrót karetki)
+             * ? - oznacza "0 lub 1 raz" (opcjonalny)
+             * \\n - newline (nowa linia)
+             */
+            scanner.useDelimiter(",|\\r?\\n"); // delimiter: przecinek lub nowa linia
+
+            while (scanner.hasNext()) {
+                try {
+                    String name = scanner.next();
+                    int age = Integer.parseInt(scanner.next());
+                    double salary = Double.parseDouble(scanner.next());
+                    boolean active = Boolean.parseBoolean(scanner.next());
+
+                    System.out.printf("Name: %s, Age: %d, Salary: %.2f, Active: %b\n",
+                            name, age, salary, active);
+
+                } catch (Exception e) {
+                    System.out.println("Błąd parsowania: " + e.getMessage());
+                    break;
+                }
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Plik nie znaleziony: " + e.getMessage());
+        }
+        System.out.println("---");
+    }
+   ```
 
 1. Realizacja zadania 2:
 
