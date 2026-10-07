@@ -64,11 +64,9 @@ teams.
         try (Scanner scanner = new Scanner(new File(tekstowyPath))) {
             System.out.println("Odczyt z parsowaniem typów:");
             /**
-             * \\r - carriage return (powrót karetki)
-             * ? - oznacza "0 lub 1 raz" (opcjonalny)
              * \\n - newline (nowa linia)
              */
-            scanner.useDelimiter(",|\\r?\\n"); // delimiter: przecinek lub nowa linia
+            scanner.useDelimiter(",|\\n"); // delimiter: przecinek lub nowa linia
 
             while (scanner.hasNext()) {
                 try {
@@ -95,7 +93,55 @@ teams.
 
 1. Realizacja zadania 2:
 
-   ![image6](media/image6.png)
+   ```java
+   private static void testObjectStream() {
+        System.out.println("7. ObjectInputStream / ObjectOutputStream:");
+
+        // Tworzenie obiektów do zapisania
+        List<String> lista = Arrays.asList("Java", "Go", "kotlin", "Python", "C++");
+        Student student = new Student("Anna Nowak", 25, 4.5);
+
+        // zapis objektów
+        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(FILE_PATH_2))) {
+            out.writeObject(lista);
+            out.writeObject(student);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        // Odczyt obiektów
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(FILE_PATH_2))) {
+            List<String> odczytanaLista = (List<String>) ois.readObject();
+            IO.println(odczytanaLista);
+            Student student2 = (Student) ois.readObject();
+            IO.println(student2);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+   private static class Student implements Serializable {
+        private String name;
+        private int age;
+        private double grade;
+        public Student(String name, int age, double grade) {
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
+        }
+        @Override
+        public String toString() {
+            return String.format("Student[name=%s, age=%d, grade=%.1f]", name, age, grade);
+        }
+    }
+   ```
 
 1. Realizacja zadania 3:
 
