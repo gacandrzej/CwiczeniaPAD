@@ -145,7 +145,53 @@ teams.
 
 1. Realizacja zadania 3:
 
-   ![image7](media/image7.png)
+   ```java
+   private static void testDataStream() {
+        try (DataOutputStream dos = new DataOutputStream(new FileOutputStream(FILE_PATH_3))) {
+            dos.writeUTF("Jan Kowalski");  // String
+            dos.writeInt(30);              // int
+            dos.writeDouble(4500.75);      // double
+            dos.writeBoolean(true);        // boolean
+            dos.writeChar('A');            // char
+
+            // Zapis tablicy
+            int[] numbers = {1, 2, 3, 4, 5};
+            dos.writeInt(numbers.length);
+            for (int num : numbers) {
+                dos.writeInt(num);
+            }
+            System.out.println("Zapisano różne typy danych");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        // Odczyt różnych typów danych
+        try (DataInputStream dis = new DataInputStream(new FileInputStream(FILE_PATH_3))) {
+            String name = dis.readUTF();
+            int age = dis.readInt();
+            double salary = dis.readDouble();
+            boolean active = dis.readBoolean();
+            char grade = dis.readChar();
+
+            // Odczyt tablicy
+            int arraySize = dis.readInt();
+            int[] numbers = new int[arraySize];
+            for (int i = 0; i < arraySize; i++) {
+                numbers[i] = dis.readInt();
+            }
+
+            System.out.println("Odczytane dane:");
+            System.out.printf("Name: %s, Age: %d, Salary: %.2f, Active: %b, Grade: %c\n",
+                    name, age, salary, active, grade);
+            System.out.println("Tablica: " + Arrays.toString(numbers));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+   ```
 
 1. Realizacja zadania 4:
 
