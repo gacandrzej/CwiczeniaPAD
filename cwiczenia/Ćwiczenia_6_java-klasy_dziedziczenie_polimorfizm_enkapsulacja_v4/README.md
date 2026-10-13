@@ -259,6 +259,72 @@ teams.
 
    ![image31](media/image31.png)
 
-   ![image32](media/image32.png)
+   ```java
+   package komputery;
+
+    import org.junit.jupiter.api.AfterEach;
+    import org.junit.jupiter.api.BeforeEach;
+    import org.junit.jupiter.api.Test;
+
+    import static org.junit.jupiter.api.Assertions.*;
+
+    class SmartfonTest {
+        private Smartfon smartfon;
+
+        @BeforeEach
+        void setUp() {
+            smartfon = new Smartfon("Samsung", "Galaxy S21", 2022, "Android",128);
+        }
+
+        @AfterEach
+        void tearDown() {
+            smartfon = null;
+        }
+
+        @Test
+        void getProducent() {
+            assertEquals("Samsung", smartfon.getProducent());
+        }
+
+        @Test
+        void setProducent() {
+            smartfon.setProducent("Apple");
+            assertEquals("Apple", smartfon.getProducent());
+        }
+
+        @Test
+        void getIlośćPamięci() {
+            assertEquals(128, smartfon.getIlośćPamięci());
+        }
+
+        @Test
+        void setIlośćPamięci() {
+            smartfon.setIlośćPamięci(256);
+            assertEquals(256, smartfon.getIlośćPamięci());
+        }
+
+        @Test
+        void testToString() {
+            assertEquals("Komputer{producent='Samsung', model='Galaxy S21', rokProdukcji=2022}Smartfon{systemOperacyjny='Android', ilośćPamięci=128}", smartfon.toString());
+        }
+
+
+        @Test
+        void testEquals() {
+            Smartfon smartfon2 = new Smartfon("Samsung", "Galaxy S21", 2022, "Android",128);
+            assertEquals(smartfon, smartfon2);
+        }
+
+        @Test
+        void testHashCode() {
+            Smartfon smartfon2 = new Smartfon("Samsung", "Galaxy S21", 2022, "Android",128);
+            assertEquals(smartfon.hashCode(), smartfon2.hashCode());
+        }
+
+   ```
+
+1. Wykonanie testów:
+
+   ![testy](../../media/2026-10-13-12-09-14.png)
 
 1. KONIEC.
