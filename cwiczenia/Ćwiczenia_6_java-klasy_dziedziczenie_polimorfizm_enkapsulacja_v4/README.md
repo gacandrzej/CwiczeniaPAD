@@ -159,6 +159,93 @@ teams.
 
    ![image29](media/image29.png)
 
+1. Zaimplementuj metody equals(), clone() i hashCode() w klasie Komputer oraz dodaj metodę copy().
+
+   ![metody](../../media/2026-10-13-10-19-31.png)
+
+   ```java
+   @Override
+    public int hashCode() {
+        return Objects.hash(producent, model, rokProdukcji);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true; // ten sam obiekt w pamięci
+        if (!(obj instanceof Komputer)) return false; // inny typ
+        Komputer komputer = (Komputer) obj;
+        return rokProdukcji == komputer.rokProdukcji &&
+                Objects.equals(producent, komputer.producent) &&
+                Objects.equals(model, komputer.model);
+    }
+
+   public Komputer copy(String producent, String model, int rokProdukcji) {
+        return new Komputer(
+                producent != null ? producent : this.producent,
+                model != null ? model : this.model,
+                rokProdukcji >= 0 ? rokProdukcji : this.rokProdukcji
+        );
+    }
+   ```
+
+1. Utwórz klasę TestKomputerów do sprawdzenia tych metod.
+
+   ```java
+   package komputery;
+
+   import java.util.HashSet;
+   import java.util.Set;
+
+    public class TestKomputerow {
+
+        public static void main(String[] args) {
+
+            // Tworzymy kilka obiektów
+            Komputer k1 = new Komputer("Dell", "XPS", 2022);
+            Komputer k2 = new Komputer("Dell", "XPS", 2022);
+            Komputer k3 = new Komputer("HP", "Pavilion", 2021);
+
+            // Wyświetlamy
+            IO.println("k1: " + k1);
+            IO.println("k2: " + k2);
+            IO.println("k3: " + k3);
+            IO.println();
+
+            // --- equals() ---
+            IO.println("k1.equals(k2): " + k1.equals(k2)); // true
+            IO.println("k1.equals(k3): " + k1.equals(k3)); // false
+            IO.println();
+
+            // --- hashCode() ---
+            IO.println("hashCode k1: " + k1.hashCode());
+            IO.println("hashCode k2: " + k2.hashCode());
+            IO.println("hashCode k3: " + k3.hashCode());
+            IO.println();
+
+            // --- HashSet ---
+            Set<Komputer> set = new HashSet<>();
+            set.add(k1);
+            set.add(k2); // nie zostanie dodany, bo equals == true
+            set.add(k3);
+
+            IO.println("Zawartość HashSet:");
+            for (Komputer k : set) {
+                IO.println(k);
+            }
+            IO.println();
+
+            // --- copy() ---
+            Komputer k4 = k1.copy(null, "Latitude", -1); // zmieniamy tylko model
+            IO.println("k4 (kopiowany z k1, zmieniony model): " + k4);
+            IO.println("k1.equals(k4): " + k1.equals(k4)); // false
+
+            Smartfon smartfon = new Smartfon("Samsung", "Galaxy S21", 2022, "Android", 128);
+                    IO.println(smartfon);
+        }
+    }
+
+   ```
+
 1. Dodaj nowy package i utwórz klasę nadrzędną oraz dwie potomne według
     własnego pomysłu, testuj analogicznie jak wcześniej.
 
