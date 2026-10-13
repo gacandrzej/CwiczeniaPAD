@@ -137,6 +137,24 @@ teams.
 
    ![image28](media/image28.png)
 
+1. Wywołanie w Main:
+
+   ```java
+    // Smartfon
+        Komputer smartfon = new Smartfon("Google", "Pixel 10 Pro", 2025, "Android", 8);
+        Smartfon smartfon2 = new Smartfon("Apple", "17 Pro", 2025, "Apple IOS", 16);
+       smartfon2.setProducent("Apple");
+       smartfon2.setModel("17 Pro");
+       smartfon2.setRokProdukcji(2025);
+       smartfon2.setSystemOperacyjny("ios 17");
+       smartfon2.setIlośćPamięci(16);
+
+    IO.println(smartfon.toString());
+    IO.println(smartfon2.toString());
+    smartfon.włacz();
+    smartfon2.włacz();
+   ```
+
 1. Wykonaj testy.
 
    ![image29](media/image29.png)
