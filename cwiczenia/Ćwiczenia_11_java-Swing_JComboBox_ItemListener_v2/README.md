@@ -12,19 +12,46 @@ Pliki ikon, obrazów ściągnij z teams. ( animals.zip )
 
 1. Dodaj podstawowe metody
 
-   ![image1](media/image1.png)
+   ```java
+   setTitle("Wyswietlanie obrazkow");
+   setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   setLocationRelativeTo(null);
+   JPanel panel = new JPanel();
+   panel.setLayout(new BorderLayout());
+   ```
 
 1. Ustaw ścieżki do obrazków:
 
    ![image2](media/image2.png)
 
-1. Postać aplikacji do testów:
+1. Przygotuj tablicę nazw zwierząt, ptaków, ... około 10 sztuk.
+
+   ```java
+   String[] zwierzaki = {"bug", "dog", "owl", "pig", "rabbit", "raven"};
+   ```
+
+1. Dodaj tablicę nazw zwierząt do JComboBox:
+
+   ```java
+   // przed konstruktorem
+   private final JComboBox<String> listaZwierzakow;
+   // w konstruktorze
+   listaZwierzakow = new JComboBox<>(zwierzaki);
+   ```
+
+1. Dodaj JComoBox na północ.
+
+1. Postać aplikacji do pierwszych testów:
 
    ![image3](media/image3.png)
 
-1. Przygotuj tablicę nazw zwierząt, ptaków, ... około 10 sztuk.
+   Efekt w terminalu:
 
-1. Dodaj JComoBox na północ.
+   ```text
+   Wybrano zwierzak: owl
+   Wybrano zwierzak: rabbit
+   Wybrano zwierzak: raven
+   ```
 
 1. Dodaj ItemListenera dla listy rozwijanej.
 
