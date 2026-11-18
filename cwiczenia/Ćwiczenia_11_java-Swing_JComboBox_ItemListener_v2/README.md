@@ -41,6 +41,12 @@ Pliki ikon, obrazów ściągnij z teams. ( animals.zip )
 
 1. Dodaj JComoBox na północ.
 
+1. Dodaj ItemListenera dla listy rozwijanej.
+
+   ```java
+   println("Wybrano zwierzak: " + listaZwierzakow.getSelectedItem());
+   ```
+
 1. Postać aplikacji do pierwszych testów:
 
    ![image3](media/image3.png)
@@ -52,8 +58,6 @@ Pliki ikon, obrazów ściągnij z teams. ( animals.zip )
    Wybrano zwierzak: rabbit
    Wybrano zwierzak: raven
    ```
-
-1. Dodaj ItemListenera dla listy rozwijanej.
 
 1. Testy: wypisz zaznaczany i odznaczany element w terminalu. ()
 
