@@ -113,7 +113,16 @@ Pliki ikon, obrazów ściągnij z teams. ( animals.zip )
     utworzoną z nazw plików. Czytaj nazwy zwierząt z katalogu picture,
     usuń rozszerzenie .png:
 
-   ![image14](media/image14.png)
+   ```java
+   public static final String IMAGE_DIR = "picture/";
+   listaZwierzakow = new JComboBox<>();
+
+        File file = new File(IMAGE_DIR);
+        String [] animals = file.list();
+        for (String animal : animals){
+           listaZwierzakow.addItem(animal.replace(".png",""));
+        }
+   ```
 
 1. Zmodyfikuj klasę tak, aby implementowała ItemListener.
 
