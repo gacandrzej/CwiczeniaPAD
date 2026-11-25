@@ -5,15 +5,37 @@ teams.
 
 1. Utwórz nowy projekt w katalogu na dysku C:
 
+1. Dodaj package cwiczenia12.
+
 1. Dodaj podstawowe metody
 
-   ![image1](media/image1.png)
+   ```java 
+   JCheckBox checkboxTenis = new JCheckBox("Czy grasz w tenisa?");
+   ```
 
 1. Ikony pobierz z katalogu Obrazy z teams: plik sport.zip.
 
-1. Postać aplikacji do testów:
+1. Pierwsza postać aplikacji do testów:
 
-   ![image2](media/image2.png)
+   ![testy1](../../media/2026-11-25-13-47-23.png)
+
+1. Ustaw: czcionkę, kolory, obramowanie, akcje zaznaczenia z Alt z klawiatury,
+
+1. Dodaj do obsługi ItemListenera:  
+
+   ```java
+   checkboxTenis.addItemListener(new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+   ```
+
+1. Wynik w terminalu:
+
+   ![terminal](../../media/2026-11-25-13-44-38.png)
+
+1. Druga postać aplikacji do testów:
+
+   ![testy2](../../media/2026-11-25-13-42-30.png)
 
 1. Przygotuj panel dla checkbox i umieść go na północ.
 
